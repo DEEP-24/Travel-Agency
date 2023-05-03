@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* CSS Variables */
+:root {
+  --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+}
+
+#navbar::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo {
+  margin: 10px 34px;
+}
+
+#logo img {
+  height: 59px;
+  margin: 3px 6px;
+}
+
+/* Navigation Bar: List Styling */
+
+#navbar ul {
+  display: flex;
+}
+
+#navbar ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+#navbar ul li a {
+  color: white;
+  display: block;
+  padding: 3px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+#navbar ul li a:hover {
+  color: black;
+  background-color: white;
+}
+
+/* Home Section */
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 180px;
+  height: 840px;
+  justify-content: center;
+  align-items: center;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  background: url("../bg1.jpg") no-repeat center center/cover;
+  height: 937px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+#home img {
+  opacity: 0.3;
+}
+#home h1 {
+  font-size: 3.5rem;
+  color: black;
+  text-align: center;
+}
+
+#home p {
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+}
+/* destinations Section */
+#destinations {
+  margin: 25px;
+  display: grid;
+}
+#destinations .box {
+  height: 250px;
+  border: 2px solid black;
+  padding: 30px;
+  margin: 2px 40px;
+  border-radius: 28px;
+  background: #f5f5f5;
+  margin-bottom: 20px;
+}
+
+#destinations .box img {
+  height: 150px;
+  margin: auto;
+  display: block;
+}
+
+footer {
+  background: grey;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 25px 20px;
+}
+
+.h-primary {
+  font-family: "Bree Serif", serif;
+  font-size: 3.8rem;
+  padding: 12px;
+}
+
+.h-secondary {
+  font-family: "Bree Serif", serif;
+  font-size: 2.3rem;
+  padding: 12px;
+}
+
+.btn {
+  padding: 6px 20px;
+  border: 2px solid white;
+  background-color: brown;
+  color: white;
+  margin: 17px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#about-us {
+  height: 840px;
+}
+
+#about-text {
+  color: black;
+  font-size: 1.5rem;
+}
+#about-text p {
+  padding: 40px;
+  margin: 3 px;
+}
+.center {
+  text-align: center;
+}
+
+.form-group {
+  padding: 5px;
+  margin: 25px;
+}
+
+/* Contact Section */
+#contact {
+  padding: 10px;
+  position: relative;
+  height: 840px;
+}
+
+.contact-form {
+  font-size: 1rem;
+}
+
+.contact-form label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.contact-form h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.contact-form p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.office-address {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.office-address h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.office-address p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.office-address address {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  * {
+    overflow-x: hidden;
+  }
+
+  :root {
+    --navbar-height: 45px;
+  }
+
+  #logo img {
+    height: 45px;
+    width: 30px;
+  }
+
+  #navbar ul li {
+    font-size: 0.7rem;
+  }
+
+  #home {
+    padding: 3px 30px;
+    height: 750px;
+  }
+
+  #home::before {
+    height: 883px;
+  }
+
+  #home p {
+    font-size: 1.2rem;
+  }
+
+  #destinations .box {
+    height: 305px;
+  }
+
+  #destinations.box img {
+    height: 10px;
+  }
+
+  #destinations.box h2 {
+    font-size: 0.3rem;
+  }
+
+  #destinations.box p {
+    font-size: 0.2rem;
+  }
+
+  #about-us {
+    height: 750px;
+  }
+
+  #about-us p {
+    font-size: 0.9rem;
+  }
+
+  #contact {
+    height: 750px;
+  }
+
+  .contact-form h2 {
+    font-size: 2.5rem;
+  }
+
+  .office-address h2 {
+    font-size: 2.5rem;
+  }
+}
